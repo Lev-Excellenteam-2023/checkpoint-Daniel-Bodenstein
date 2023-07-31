@@ -5,8 +5,8 @@
 #include "School.h"
 
 // Function to create a new student node
-struct Student* createStudent(const char* fName, const char* lName,long long int phone, int level, int class, int grades[NUM_OF_GRADES]) {
-   
+struct Student* createStudent(const char* fName, const char* lName, long long int phone, int level, int class, int grades[NUM_OF_GRADES]) {
+
     struct Student* newStudent = (struct Student*)malloc(sizeof(struct Student));
     if (newStudent) {
         strcpy(newStudent->firstName, fName);
@@ -40,7 +40,7 @@ void insertStudent(struct Student* student) {
 
 void printStudentList() {
 
-    for (int i = 0; i < NUM_OF_LEVELS; i++){
+    for (int i = 0; i < NUM_OF_LEVELS; i++) {
         for (int j = 0; j < NUM_OF_CLASSES; j++) {
             struct Student* temp = school[i][j].head;
 
