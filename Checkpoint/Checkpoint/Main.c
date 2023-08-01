@@ -25,13 +25,13 @@ struct Student* createStudent(const char* fName, const char* lName, long long in
 // Inserts a student to a linked list
 void insertStudent(struct Student* student) {
 
-    if (school[student->level][student->classroom].student == NULL) {
+    if (school[student->level - 1][student->classroom - 1].student == NULL) {
         student->next = NULL;
-        school[student->level][student->classroom].student = student;
+        school[student->level - 1][student->classroom - 1].student = student;
     }
     else {
-        student->next = school[student->level][student->classroom].student;
-        school[student->level][student->classroom].student = student;   
+        student->next = school[student->level - 1][student->classroom - 1].student;
+        school[student->level - 1][student->classroom - 1].student = student;   
     }
 }
 
@@ -61,6 +61,14 @@ void freeStudentList() {
                 school[i][j].student = school[i][j].student->next;
                 free(temp);
             }
+        }
+    }
+}
+
+int schoolInit() {
+    for (int i = 0; i < NUM_OF_LEVELS; i++) {
+        for (int j = 0; j < NUM_OF_CLASSES; j++) {
+            school[i][j].student = NULL;
         }
     }
 }
