@@ -74,7 +74,7 @@ int schoolInit() {
 }
 
 int main() {
-    FILE* file = fopen("students.txt", "r");
+    FILE* file = fopen("students_with_class.txt", "r");
 
     if (file == NULL) {
         printf("Error opening the file.\n");
