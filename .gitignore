@@ -1,0 +1,40 @@
+
+# Ignore Visual Studio files and folders
+*.sln
+*.suo
+*.user
+*.csproj
+*.vbproj
+*.vcxproj
+*.vsixmanifest
+*.pubxml
+*.publishsettings
+*.vssscc
+bin/
+obj/
+_UpgradeReport_Files/
+UpgradeLog.XML
+TestResults/
+**/.vs/
+
+**/x64/
+# Ignore specific Visual Studio files
+CheckPoint/CheckPoint/CheckPoint.vcxproj
+CheckPoint/CheckPoint/CheckPoint.vcxproj.filters
+CheckPoint/CheckPoint/CheckPoint.vcxproj.user
+Checkpoint/Checkpoint/Debug/
+Checkpoint/Debug/
+
+CheckPoint/.vs/CheckPoint/FileContentIndex/9d3ffacb-54ad-4c38-8b65-b566b4a702e3.vsidx
+CheckPoint/.vs/CheckPoint/FileContentIndex/read.lock
+checkPoint/.vs/CheckPoint/v17/Browse.VC.db
+
+
+# Ignore Visual Studio code coverage files
+*.coverage
+*.coveragexml
+
+# Ignore NuGet package restore files
+packages/
+
+# Ignore build output folder
