@@ -317,6 +317,7 @@ void printTopNStudentsPerCourse() {
                 }
                 temp = temp->next;
             }
+            temp = school[level - 1][++i].student;
         }
     }
 
